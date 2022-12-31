@@ -46,6 +46,7 @@ namespace GD_SLEditor
 			}
 		}
 
+		// WIP
 		private void HexModify()
 		{
 			Server = Serverlink.Text;
