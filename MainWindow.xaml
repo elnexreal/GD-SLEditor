@@ -5,10 +5,76 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GD_SLEditor"
         mc:Ignorable="d"
-        Title="GDPS Server Link Editor" Height="450" Width="800" ResizeMode="CanMinimize"
+        Title="GD Server Link Editor" Height="450" Width="760" ResizeMode="CanMinimize"
 		Background="#363636">
 
-    <Grid>
-        
-    </Grid>
+	<!--Templates-->
+	<Window.Resources>
+		<!--Button template-->
+		<Style TargetType="Button">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="FontFamily" Value="/Fonts/#Unbounded"/>
+			<Setter Property="Width" Value="160"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="Background" Value="#444444"/>
+			<Setter Property="Cursor" Value="Hand"/>
+
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Border Background="{TemplateBinding Background}" BorderBrush="#222222" BorderThickness="1">
+							<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+
+            <Style.Triggers>
+				<Trigger Property="IsMouseOver" Value="True">
+					<Setter Property="Background" Value="#333333"/>
+				</Trigger>
+			</Style.Triggers>
+		</Style>
+	</Window.Resources>
+
+	<!--Content-->
+	<Grid Margin="10">
+		<TextBlock Text="GDSLEditor" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Foreground="#CCCCCC" FontFamily="/Fonts/#Prompt ExtraLight"/>
+		<TextBlock Text="elnexreal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
+
+		<!--Server editor thing-->
+		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" CanVerticallyScroll="False">
+			<!--Link box-->
+			<Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="55" Background="#444444">
+				<TextBlock Text="Server link (32 characters)" FontSize="15" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Stretch" Foreground="White" FontFamily="/Fonts/#Prompt Medium" Padding="0,5,0,0"/>
+				<TextBox x:Name="Serverlink" Text="http://www.boomlings.com/database" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Background="#333333" Margin="3" BorderThickness="0" MaxLength="33" FontSize="14"/>
+			</Grid>
+			<!--Button group-->
+			<Grid Margin="0,8,0,0">
+				<Button Content="Open" x:Name="Openbtn" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+				<Button Content="Apply edit" x:Name="Applybtn" VerticalAlignment="Bottom" HorizontalAlignment="Right" Foreground="#FFFFFF"/>
+			</Grid>
+			<!--Examples-->
+			<TextBlock Text="Examples" Background="#444444" HorizontalAlignment="Stretch" TextAlignment="Center" Margin="0,10,0,0" FontFamily="/Fonts/#Unbounded" Foreground="#AAAAAA"/>
+			<StackPanel Background="#444444" Margin="0,5,0,0">
+				<StackPanel.Resources>
+					<Style TargetType="TextBlock">
+						<Setter Property="FontFamily" Value="/Fonts/#Unbounded"/>
+						<Setter Property="FontSize" Value="15"/>
+						<Setter Property="Foreground" Value="#AAAAAA"/>
+						<Setter Property="TextAlignment" Value="Center"/>
+						<Setter Property="Margin" Value="5,4,5,0"/>
+					</Style>
+				</StackPanel.Resources>
+
+				<TextBlock Text="http://www.9charsweb.com/database"/>
+				<TextBlock Text="https://thisisawebgd.com/database"/>
+				<TextBlock Text="helloguyswelcom.000webhostapp.com"/>
+				<TextBlock Text="iloveyourobtopxddd.7m.pl/database"/>
+				<TextBlock Text="www.mysuperdomain.coffee/database"/>
+			</StackPanel>
+		</StackPanel>
+		
+		<TextBlock Text="No file selected" x:Name="FPath" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="#55FFFFFF" Margin="25" />
+	</Grid>	
 </Window>
