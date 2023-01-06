@@ -40,7 +40,8 @@
 	<!--Content-->
 	<Grid Margin="10">
 		<TextBlock Text="GDSLEditor" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Foreground="#CCCCCC" FontFamily="/Fonts/#Prompt ExtraLight"/>
-		<TextBlock Text="elnexreal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
+		<TextBlock Text="elnexreal" x:Name="Devname" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
+		<TextBlock Text="No file selected" x:Name="FPath" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="#55FFFFFF" Margin="25"/>
 
 		<!--Server editor thing-->
 		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" CanVerticallyScroll="False">
@@ -75,6 +76,5 @@
 			</StackPanel>
 		</StackPanel>
 		
-		<TextBlock Text="No file selected" x:Name="FPath" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="#55FFFFFF" Margin="25" />
 	</Grid>	
 </Window>
