@@ -13,4 +13,4 @@ Basically a tool that helps you on your process to create a GDPS
 4. Go to /bin/Debug/Release and there you have
 ```
 
-### If you have any questions you can contact me on Discord `elnexreal#7763` or create an [Issue](https://github.com/elnexreal/GD-SLEditor/issues/new)
+### If you have any questions you can contact me on Discord `elnexreal` or create an [Issue](https://github.com/elnexreal/GD-SLEditor/issues/new)
