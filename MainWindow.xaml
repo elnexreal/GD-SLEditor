@@ -44,6 +44,8 @@
             <TextBlock Text="This program is recommended to use only on original executables, if it doesn't work, please use HxD" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Foreground="#777777" FontFamily="/Fonts/#Prompt ExtraLight"/>
         </StackPanel>
         <TextBlock Text="elnexreal" x:Name="Devname" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
+        <Button Content="Github" Width="70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="OpenGit">
+        </Button>
 		<TextBlock Text="No file selected" x:Name="FPath" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="#55FFFFFF" Margin="25"/>
 
 		<!--Server editor thing-->

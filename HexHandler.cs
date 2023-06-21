@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace GD_SLEditor.Handling
 {
@@ -12,32 +13,37 @@ namespace GD_SLEditor.Handling
     {
         public static void HexModify(string executable, string serverurl)
         {
-            string baseUrl = "http://www.boomlings.com/database";
+            try
+            {
+                string baseUrl = "http://www.boomlings.com/database";
 
-            // Reads the hex of the executable
-            byte[] execBytes = File.ReadAllBytes(executable);
-            string exHex = bytesToHex(execBytes);
+                // Reads the hex of the executable
+                byte[] execBytes = File.ReadAllBytes(executable);
+                string exHex = bytesToHex(execBytes);
 
-            // Reads the hex of the server url provided
-            byte[] urlBytes = Encoding.ASCII.GetBytes(serverurl);
-            string urlHex = bytesToHex(urlBytes);
+                // Reads the hex of the server url provided
+                byte[] urlBytes = Encoding.ASCII.GetBytes(serverurl);
+                string urlHex = bytesToHex(urlBytes);
 
-            // Converts boomlings URL to HEX
-            string boomlingsHex = stringToHex(baseUrl);
+                // Converts boomlings URL to HEX
+                string boomlingsHex = stringToHex(baseUrl);
 
-            // Base64 encode everything
-            string b64Url = stringToHex(base64encode(serverurl));
-            string b64Boomlings = stringToHex(base64encode(baseUrl));
+                // Base64 encode everything
+                string b64Url = stringToHex(base64encode(serverurl));
+                string b64Boomlings = stringToHex(base64encode(baseUrl));
 
-            // Replace the URL's
-            string encodedHex = exHex.Replace(boomlingsHex, urlHex).Replace(b64Boomlings, b64Url);
+                // Replace the URL's
+                string encodedHex = exHex.Replace(boomlingsHex, urlHex).Replace(b64Boomlings, b64Url);
 
-            // Write the file
-            File.WriteAllBytes(executable, StringToByteArray(encodedHex));
+                // Write the file
+                File.WriteAllBytes(executable, StringToByteArray(encodedHex));
 
-            // Debug
-            //File.WriteAllText("C:/Users/elnexreal/Desktop/Deb/Gamehex.txt", exHex);
-            //File.WriteAllText("C:/Users/elnexreal/Desktop/Deb/Urlhex.txt", urlHex);
+                MessageBox.Show("Server url changed to " + serverurl);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message.ToString());
+            } 
         }
 
         // Converts HEX string into a Byte arraw to write in the exe

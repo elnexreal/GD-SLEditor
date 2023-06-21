@@ -50,21 +50,14 @@ namespace GD_SLEditor
                 MessageBox.Show("Please select your Geometry Dash executable", "Operation cancelled", MessageBoxButton.OK);
             }
         }
+
+        // Apply button handler
         private void ApplyButton(object sender, RoutedEventArgs e)
         {
             string server = Serverlink.Text;
             if (server.Length == 33)
             {
-                try
-                {
-                    HexHandler.HexModify(executable, server);
-
-                    MessageBox.Show("Server url changed to" + server);
-                }
-                catch (IOException err)
-                {
-                    MessageBox.Show(err.Message);
-                }
+                HexHandler.HexModify(executable, server);
             }
             else
             {
@@ -79,6 +72,11 @@ namespace GD_SLEditor
             Applybtn.Click += ApplyButton;
         }
 
+        // Function to open github
+        private void OpenGit(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/elnexreal");
+        }
         public MainWindow()
         {
             InitializeComponent();
