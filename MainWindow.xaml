@@ -38,9 +38,12 @@
 	</Window.Resources>
 
 	<!--Content-->
-	<Grid Margin="10">
-		<TextBlock Text="GDSLEditor" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Foreground="#CCCCCC" FontFamily="/Fonts/#Prompt ExtraLight"/>
-		<TextBlock Text="elnexreal" x:Name="Devname" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="GDSLEditor" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="25" Foreground="#CCCCCC" FontFamily="/Fonts/#Prompt ExtraLight"/>
+            <TextBlock Text="This program is recommended to use only on original executables, if it doesn't work, please use HxD" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="12" Foreground="#777777" FontFamily="/Fonts/#Prompt ExtraLight"/>
+        </StackPanel>
+        <TextBlock Text="elnexreal" x:Name="Devname" TextAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Bottom" Foreground="#30FFFFFF" FontFamily="/Fonts/#Unbounded"/>
 		<TextBlock Text="No file selected" x:Name="FPath" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Foreground="#55FFFFFF" Margin="25"/>
 
 		<!--Server editor thing-->
