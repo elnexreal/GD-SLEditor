@@ -2,7 +2,7 @@
 Basically a tool that helps you on your process to create a GDPS
 
 ## Notes
-*```The server link must have exactly 33 characters, no more, no less```*
+*```The server link must have exactly 32 characters, no more, no less```*
 
 ## How to build
 
