@@ -52,7 +52,7 @@
 		<StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" CanVerticallyScroll="False">
 			<!--Link box-->
 			<Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="55" Background="#444444">
-				<TextBlock Text="Server link (32 characters)" FontSize="15" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Stretch" Foreground="White" FontFamily="/Fonts/#Prompt Medium" Padding="0,5,0,0"/>
+				<TextBlock Text="Server link (33 characters)" FontSize="15" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Stretch" Foreground="White" FontFamily="/Fonts/#Prompt Medium" Padding="0,5,0,0"/>
 				<TextBox x:Name="Serverlink" Text="http://www.boomlings.com/database" HorizontalAlignment="Stretch" TextAlignment="Center" VerticalAlignment="Bottom" Foreground="White" Background="#333333" Margin="3" BorderThickness="0" MaxLength="33" FontSize="14"/>
 			</Grid>
 			<!--Button group-->
