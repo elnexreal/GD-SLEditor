@@ -25,14 +25,14 @@ namespace GD_SLEditor.Handling
                 byte[] urlBytes = Encoding.ASCII.GetBytes(serverurl);
                 string urlHex = bytesToHex(urlBytes);
 
-                // Converts boomlings URL to HEX
+                // Converts boomlings url to hex
                 string boomlingsHex = stringToHex(baseUrl);
 
                 // Base64 encode everything
                 string b64Url = stringToHex(base64encode(serverurl));
                 string b64Boomlings = stringToHex(base64encode(baseUrl));
 
-                // Replace the URL's
+                // Replace all the occurences of the url
                 string encodedHex = exHex.Replace(boomlingsHex, urlHex).Replace(b64Boomlings, b64Url);
 
                 // Write the file
@@ -46,7 +46,7 @@ namespace GD_SLEditor.Handling
             } 
         }
 
-        // Converts HEX string into a Byte arraw to write in the exe
+        // Converts hex string into a Byte arraw to write in the exe
         private static byte[] StringToByteArray(string hex)
         {
             return Enumerable.Range(0, hex.Length)
@@ -62,7 +62,7 @@ namespace GD_SLEditor.Handling
             return Convert.ToBase64String(bytes);
         }
 
-        // Converts bytes to HEX strings
+        // Converts bytes to hex strings
         private static string bytesToHex(byte[] bytes)
         {
             return BitConverter.ToString(bytes).Replace("-", string.Empty);

@@ -65,22 +65,9 @@ namespace GD_SLEditor
             }
         }
 
-        private void InitProgram()
-        {
-            // Link the button click to functions
-            Openbtn.Click += OpenFileMenu;
-            Applybtn.Click += ApplyButton;
-        }
-
-        // Function to open github
-        private void OpenGit(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/elnexreal");
-        }
         public MainWindow()
         {
             InitializeComponent();
-            InitProgram();
         }
     }
 }
